@@ -41,4 +41,6 @@ With this library, you can control research versions of Franka Emika robots. See
     make
 ### Checking current kernel
     uname - r #result needs to contain "rt"
+### Communication test
+    ./communication_test 172.16.0.2
 
