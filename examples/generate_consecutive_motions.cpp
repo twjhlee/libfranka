@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <cmath>
 #include <iostream>
@@ -55,7 +55,7 @@ int main(int argc, char** argv) {
 
           double cycle = std::floor(std::pow(-1.0, (time - std::fmod(time, time_max)) / time_max));
           double omega = cycle * omega_max / 2.0 * (1.0 - std::cos(2.0 * M_PI / time_max * time));
-
+	  
           franka::JointVelocities velocities = {{0.0, 0.0, omega, 0.0, 0.0, 0.0, 0.0}};
           if (time >= 2 * time_max) {
             std::cout << std::endl << "Finished motion." << std::endl;

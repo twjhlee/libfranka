@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/follow_moveit_traj.dir/follow_moveit_traj.cpp.o  -o follow_moveit_traj  -Wl,-rpath,/home/panda/libfranka: libexamples_common.a ../libfranka.so.0.8.0 -lrealsense2 

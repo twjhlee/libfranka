@@ -5,3 +5,5 @@ cmake-build-*/
 install*/
 *.user
 .cache
+test
+examples/datasets

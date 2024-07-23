@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <cmath>
 #include <iostream>
@@ -31,6 +31,7 @@ int main(int argc, char** argv) {
               << "Please make sure to have the user stop button at hand!" << std::endl
               << "Press Enter to continue..." << std::endl;
     std::cin.ignore();
+
     robot.control(motion_generator);
     std::cout << "Finished moving to initial joint configuration." << std::endl;
 

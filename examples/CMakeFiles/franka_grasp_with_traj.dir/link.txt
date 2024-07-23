@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/franka_grasp_with_traj.dir/franka_grasp_with_traj.cpp.o  -o franka_grasp_with_traj  -Wl,-rpath,/home/panda/libfranka: libexamples_common.a ../libfranka.so.0.8.0 -lrealsense2 

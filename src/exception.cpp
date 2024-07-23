@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <franka/exception.h>
 
@@ -21,10 +21,8 @@ IncompatibleVersionException::IncompatibleVersionException(uint16_t server_versi
     : Exception("libfranka: Incompatible library version (server version: "s +
                 std::to_string(server_version) + ", library version: "s +
                 std::to_string(library_version) +
-                "). Please check https://frankaemika.github.io for system updates "
-                "or choose a libfranka version that uses the server version " +
-                std::to_string(server_version) +
-                " from the table at https://frankaemika.github.io/docs/compatibility.html ."s),
+                "). Please check https://frankaemika.github.io for Panda system updates "
+                "or use a different version of libfranka."s),
       server_version(server_version),
       library_version(library_version) {}
 

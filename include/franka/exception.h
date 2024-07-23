@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #pragma once
 
@@ -80,7 +80,7 @@ struct ControlException : public Exception {
   explicit ControlException(const std::string& what, std::vector<franka::Record> log = {}) noexcept;
 
   /**
-   * Vector of states and commands logged just before the exception occurred.
+   * Vector of states and commands logged just before the exception occured.
    */
   const std::vector<franka::Record> log;
 };

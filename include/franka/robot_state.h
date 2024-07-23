@@ -1,4 +1,4 @@
-// Copyright (c) 2024 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #pragma once
 
@@ -18,6 +18,7 @@ namespace franka {
 /**
  * Describes the robot's current mode.
  */
+
 enum class RobotMode {
   kOther,
   kIdle,
@@ -34,14 +35,14 @@ enum class RobotMode {
 struct RobotState {
   /**
    * \f$^{O}T_{EE}\f$
-   * Measured end effector pose in @ref o-frame "base frame".
+   * Measured end effector pose in base frame.
    * Pose is represented as a 4x4 matrix in column-major format.
    */
   std::array<double, 16> O_T_EE{};  // NOLINT(readability-identifier-naming)
 
   /**
    * \f${^OT_{EE}}_{d}\f$
-   * Last desired end effector pose of motion generation in @ref o-frame "base frame".
+   * Last desired end effector pose of motion generation in base frame.
    * Pose is represented as a 4x4 matrix in column-major format.
    */
   std::array<double, 16> O_T_EE_d{};  // NOLINT(readability-identifier-naming)
@@ -53,7 +54,7 @@ struct RobotState {
    *
    * @see F_T_NE
    * @see NE_T_EE
-   * @see Robot for an explanation of the F, NE and EE frames.
+   * @see Robot for an explanation of the NE and EE frames.
    */
   std::array<double, 16> F_T_EE{};  // NOLINT(readability-identifier-naming)
 
@@ -64,7 +65,7 @@ struct RobotState {
    *
    * @see F_T_EE
    * @see NE_T_EE
-   * @see Robot for an explanation of the F, NE and EE frames.
+   * @see Robot for an explanation of the NE and EE frames.
    */
   std::array<double, 16> F_T_NE{};  // NOLINT(readability-identifier-naming)
 
@@ -76,7 +77,7 @@ struct RobotState {
    * @see Robot::setEE to change this frame.
    * @see F_T_EE
    * @see F_T_NE
-   * @see Robot for an explanation of the F, NE and EE frames.
+   * @see Robot for an explanation of the NE and EE frames.
    */
   std::array<double, 16> NE_T_EE{};  // NOLINT(readability-identifier-naming)
 
@@ -149,14 +150,8 @@ struct RobotState {
    * Elbow configuration.
    *
    * The values of the array are:
-   *  - elbow[0]: Position of the 3rd joint in \f$[rad]\f$.
-   *  - elbow[1]: Flip direction of the elbow (4th joint):
-   *    - +1 if \f$q_4 > q_{elbow-flip}\f$
-   *    - 0 if \f$q_4 == q_{elbow-flip} \f$
-   *    - -1 if \f$q_4 < q_{elbow-flip} \f$
-   *    .
-   *    with \f$q_{elbow-flip}\f$ as specified in the robot interface specification page in the FCI
-   * Documentation.
+   *  - [0] Position of the 3rd joint in [rad].
+   *  - [1] Sign of the 4th joint. Can be +1 or -1.
    */
   std::array<double, 2> elbow{};
 
@@ -164,14 +159,8 @@ struct RobotState {
    * Desired elbow configuration.
    *
    * The values of the array are:
-   *  - elbow_d[0]: Position of the 3rd joint in \f$[rad]\f$.
-   *  - elbow_d[1]: Flip direction of the elbow (4th joint):
-   *    - +1 if \f$q_4 > q_{elbow-flip}\f$
-   *    - 0 if \f$q_4 == q_{elbow-flip} \f$
-   *    - -1 if \f$q_4 < q_{elbow-flip} \f$
-   *    .
-   *    with \f$q_{elbow-flip}\f$ as specified in the robot interface specification page in the FCI
-   * Documentation.
+   *  - [0] Position of the 3rd joint in [rad].
+   *  - [1] Sign of the 4th joint. Can be +1 or -1.
    */
   std::array<double, 2> elbow_d{};
 
@@ -179,14 +168,8 @@ struct RobotState {
    * Commanded elbow configuration.
    *
    * The values of the array are:
-   *  - elbow_c[0]: Position of the 3rd joint in \f$[rad]\f$.
-   *  - elbow_c[1]: Flip direction of the elbow (4th joint):
-   *    - +1 if \f$q_4 > q_{elbow-flip}\f$
-   *    - 0 if \f$q_4 == q_{elbow-flip} \f$
-   *    - -1 if \f$q_4 < q_{elbow-flip} \f$
-   *    .
-   *    with \f$q_{elbow-flip}\f$ as specified in the robot interface specification page in the FCI
-   * Documentation.
+   *  - [0] Position of the 3rd joint in [rad].
+   *  - [1] Sign of the 4th joint. Can be +1 or -1.
    */
   std::array<double, 2> elbow_c{};
 
@@ -194,8 +177,8 @@ struct RobotState {
    * Commanded elbow velocity.
    *
    * The values of the array are:
-   *  - delbow_c[0] Velocity of the 3rd joint in \f$\frac{rad}{s}\f$
-   *  - delbow_c[1] is always 0.
+   *  - [0] Velocity of the 3rd joint in [rad/s].
+   *  - [1] Sign of the 4th joint. Can be +1 or -1.
    */
   std::array<double, 2> delbow_c{};
 
@@ -203,8 +186,8 @@ struct RobotState {
    * Commanded elbow acceleration.
    *
    * The values of the array are:
-   *  - ddelbow_c[0] Acceleration of the 3rd joint in \f$\frac{rad}{s^2}\f$
-   *  - ddelbow_c[1] is always 0.
+   *  - [0] Acceleration of the 3rd joint in [rad/s^2].
+   *  - [1] Sign of the 4th joint. Can be +1 or -1.
    */
   std::array<double, 2> ddelbow_c{};
 
@@ -251,7 +234,7 @@ struct RobotState {
   std::array<double, 7> dq_d{};
 
   /**
-   * \f$\ddot{q}_d\f$
+   * \f$\dot{q}_d\f$
    * Desired joint acceleration. Unit: \f$[\frac{rad}{s^2}]\f$
    */
   std::array<double, 7> ddq_d{};
@@ -292,18 +275,14 @@ struct RobotState {
 
   /**
    * \f$\hat{\tau}_{\text{ext}}\f$
-   * Low-pass filtered torques generated by external forces on the joints. It does not include
-   * configured end-effector and load nor the mass and dynamics of the robot. tau_ext_hat_filtered
-   * is the error between tau_J and the expected torques given by the robot model. Unit: \f$[Nm]\f$.
+   * External torque, filtered. Unit: \f$[Nm]\f$.
    */
   std::array<double, 7> tau_ext_hat_filtered{};
 
   /**
    * \f$^OF_{K,\text{ext}}\f$
    * Estimated external wrench (force, torque) acting on stiffness frame, expressed
-   * relative to the @ref o-frame "base frame". Forces applied by the robot to the environment are
-   * positive, while forces applied by the environment on the robot are negative. Becomes
-   * \f$[0,0,0,0,0,0]\f$ when near or in a singularity. See also @ref k-frame "Stiffness frame K".
+   * relative to the base frame. See also @ref k-frame "K frame".
    * Unit: \f$[N,N,N,Nm,Nm,Nm]\f$.
    */
   std::array<double, 6> O_F_ext_hat_K{};  // NOLINT(readability-identifier-naming)
@@ -311,46 +290,35 @@ struct RobotState {
   /**
    * \f$^{K}F_{K,\text{ext}}\f$
    * Estimated external wrench (force, torque) acting on stiffness frame,
-   * expressed relative to the stiffness frame. Forces applied by the robot to the environment are
-   * positive, while forces applied by the environment on the robot are negative. Becomes
-   * \f$[0,0,0,0,0,0]\f$ when near or in a singularity. See also @ref k-frame "Stiffness frame K".
+   * expressed relative to the stiffness frame. See also @ref k-frame "K frame".
    * Unit: \f$[N,N,N,Nm,Nm,Nm]\f$.
    */
   std::array<double, 6> K_F_ext_hat_K{};  // NOLINT(readability-identifier-naming)
 
   /**
    * \f${^OdP_{EE}}_{d}\f$
-   * Desired end effector twist in @ref o-frame "base frame".
+   * Desired end effector twist in base frame.
    * Unit: \f$[\frac{m}{s},\frac{m}{s},\frac{m}{s},\frac{rad}{s},\frac{rad}{s},\frac{rad}{s}]\f$.
    */
   std::array<double, 6> O_dP_EE_d{};  // NOLINT(readability-identifier-naming)
 
   /**
-   * \f${^OddP}_O\f$
-   * Linear component of the acceleration of the robot's base, expressed in frame parallel to the
-   * @ref o-frame "base frame", i.e. the base's translational acceleration. If the base is resting
-   * this shows the direction of the gravity vector.
-   * It is harcoded for now to `{0, 0, -9.81}`.
-   */
-  std::array<double, 3> O_ddP_O{};  // NOLINT(readability-identifier-naming)
-
-  /**
    * \f${^OT_{EE}}_{c}\f$
-   * Last commanded end effector pose of motion generation in @ref o-frame "base frame".
+   * Last commanded end effector pose of motion generation in base frame.
    * Pose is represented as a 4x4 matrix in column-major format.
    */
   std::array<double, 16> O_T_EE_c{};  // NOLINT(readability-identifier-naming)
 
   /**
    * \f${^OdP_{EE}}_{c}\f$
-   * Last commanded end effector twist in @ref o-frame "base frame".
+   * Last commanded end effector twist in base frame.
    * Unit: \f$[\frac{m}{s},\frac{m}{s},\frac{m}{s},\frac{rad}{s},\frac{rad}{s},\frac{rad}{s}]\f$.
    */
   std::array<double, 6> O_dP_EE_c{};  // NOLINT(readability-identifier-naming)
 
   /**
    * \f${^OddP_{EE}}_{c}\f$
-   * Last commanded end effector acceleration in @ref o-frame "base frame".
+   * Last commanded end effector acceleration in base frame.
    * Unit:
    * \f$[\frac{m}{s^2},\frac{m}{s^2},\frac{m}{s^2},\frac{rad}{s^2},\frac{rad}{s^2},\frac{rad}{s^2}]\f$.
    */
@@ -364,7 +332,7 @@ struct RobotState {
 
   /**
    * \f$\dot{\theta}\f$
-   * Motor velocity. Unit: \f$[\frac{rad}{s}]\f$
+   * Motor velocity. Unit: \f$[rad]\f$
    */
   std::array<double, 7> dtheta{};
 
@@ -411,15 +379,5 @@ struct RobotState {
  * @return Ostream instance
  */
 std::ostream& operator<<(std::ostream& ostream, const franka::RobotState& robot_state);
-
-/**
- * Streams RobotMode in human-readable form
-
- * @param[in] ostream Ostream instance
- * @param[in] robot_mode RobotMode to stream
- *
- * @return Ostream instance
- */
-std::ostream& operator<<(std::ostream& ostream, RobotMode robot_mode);
 
 }  // namespace franka

@@ -1,9 +1,8 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2019 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <franka/control_tools.h>
 
 #include <cstring>
-#include <exception>
 #include <fstream>
 #include <string>
 

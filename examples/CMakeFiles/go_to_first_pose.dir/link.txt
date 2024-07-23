@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/go_to_first_pose.dir/go_to_first_pose.cpp.o  -o go_to_first_pose  -Wl,-rpath,/home/panda/libfranka: libexamples_common.a ../libfranka.so.0.8.0 -lrealsense2 

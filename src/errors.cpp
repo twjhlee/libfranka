@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <franka/errors.h>
 
@@ -12,7 +12,7 @@ using Error = research_interface::robot::Error;
 
 namespace franka {
 
-Errors::Errors() : Errors(std::array<bool, 41>{}) {}
+Errors::Errors() : Errors(std::array<bool, 37>{}) {}
 
 Errors::Errors(const Errors& other) : Errors(other.errors_) {}
 
@@ -21,7 +21,7 @@ Errors& Errors::operator=(Errors other) {
   return *this;
 }
 
-Errors::Errors(const std::array<bool, 41>& errors)  // NOLINT(modernize-pass-by-value)
+Errors::Errors(const std::array<bool, 37>& errors)  // NOLINT(modernize-pass-by-value)
     : errors_(errors),
       joint_position_limits_violation(
           errors_[static_cast<size_t>(Error::kJointPositionLimitsViolation)]),
@@ -90,15 +90,7 @@ Errors::Errors(const std::array<bool, 41>& errors)  // NOLINT(modernize-pass-by-
       tau_j_range_violation(errors_[static_cast<size_t>(Error::kTauJRangeViolation)]),
       instability_detected(errors_[static_cast<size_t>(Error::kInstabilityDetection)]),
       joint_move_in_wrong_direction(
-          errors_[static_cast<size_t>(Error::kJointMoveInWrongDirection)]),
-      cartesian_spline_motion_generator_violation(
-          errors_[static_cast<size_t>(Error::kCartesianSplineViolation)]),
-      joint_via_motion_generator_planning_joint_limit_violation(
-          errors_[static_cast<size_t>(Error::kJointViaPlanLimitViolation)]),
-      base_acceleration_initialization_timeout(
-          errors_[static_cast<size_t>(Error::kBaseAccelerationInitializationTimeout)]),
-      base_acceleration_invalid_reading(
-          errors_[static_cast<size_t>(Error::kBaseAccelerationInvalidReading)]) {}
+          errors_[static_cast<size_t>(Error::kJointMoveInWrongDirection)]) {}
 
 Errors::operator bool() const noexcept {
   return std::any_of(errors_.cbegin(), errors_.cend(), [](bool x) { return x; });

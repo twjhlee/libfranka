@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #pragma once
 
@@ -6,7 +6,6 @@
 #include <memory>
 
 #include <franka/robot.h>
-#include <franka/robot_model_base.h>
 #include <franka/robot_state.h>
 
 /**
@@ -62,18 +61,7 @@ class Model {
    *
    * @throw ModelException if the model library cannot be loaded.
    */
-  explicit Model(franka::Network& network, const std::string& urdf_model);
-
-  /**
-   * Creates a new Model instance only for the tests.
-   *
-   * This constructor is for the unittests for enabling mocks.
-   *
-   * @param[in] network For internal use.
-   * @param[in] robot_model unique pointer to the mocked robot_model
-   *
-   */
-  explicit Model(franka::Network& network, std::unique_ptr<RobotModelBase> robot_model);
+  explicit Model(franka::Network& network);
 
   /**
    * Move-constructs a new Model instance.
@@ -192,7 +180,7 @@ class Model {
   /**
    * Calculates the 7x7 mass matrix. Unit: \f$[kg \times m^2]\f$.
    *
-   * @param[in] robot_state State from which the mass matrix should be calculated.
+   * @param[in] robot_state State from which the pose should be calculated.
    *
    * @return Vectorized 7x7 mass matrix, column-major.
    */
@@ -275,20 +263,13 @@ class Model {
    *
    * @param[in] robot_state State from which the gravity vector should be calculated.
    * @param[in] gravity_earth Earth's gravity vector. Unit: \f$\frac{m}{s^2}\f$.
+   * Default to {0.0, 0.0, -9.81}.
    *
    * @return Gravity vector.
    */
   std::array<double, 7> gravity(const franka::RobotState& robot_state,
-                                const std::array<double, 3>& gravity_earth) const noexcept;
-
-  /**
-   * Calculates the gravity vector using the robot state. Unit: \f$[Nm]\f$.
-   *
-   * @param[in] robot_state State from which the gravity vector should be calculated.
-   *
-   * @return Gravity vector.
-   */
-  std::array<double, 7> gravity(const franka::RobotState& robot_state) const noexcept;
+                                const std::array<double, 3>& gravity_earth = {
+                                    {0., 0., -9.81}}) const noexcept;
 
   /// @cond DO_NOT_DOCUMENT
   Model(const Model&) = delete;
@@ -297,7 +278,6 @@ class Model {
 
  private:
   std::unique_ptr<ModelLibrary> library_;
-  std::unique_ptr<RobotModelBase> robot_model_;
 };
 
 }  // namespace franka

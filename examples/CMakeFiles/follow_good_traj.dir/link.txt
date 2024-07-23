@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/follow_good_traj.dir/follow_good_traj.cpp.o  -o follow_good_traj  -Wl,-rpath,/home/panda/libfranka: libexamples_common.a ../libfranka.so.0.8.0 -lrealsense2 

@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <cmath>
 #include <iostream>
@@ -52,12 +52,14 @@ int main(int argc, char** argv) {
         initial_position = robot_state.q_d;
       }
 
-      double delta_angle = M_PI / 8.0 * (1 - std::cos(M_PI / 2.5 * time));
+      double delta_angle = M_PI / 8.0 * (1.0 - std::cos(M_PI / 2.5 * time));
 
-      franka::JointPositions output = {{initial_position[0], initial_position[1],
-                                        initial_position[2], initial_position[3] + delta_angle,
-                                        initial_position[4] + delta_angle, initial_position[5],
-                                        initial_position[6] + delta_angle}};
+      std::cout << delta_angle << std::endl;
+
+      franka::JointPositions output = {{initial_position[0] - delta_angle, initial_position[1],
+                                        initial_position[2], initial_position[3],
+                                        initial_position[4], initial_position[5],
+                                        initial_position[6]}};
 
       if (time >= 5.0) {
         std::cout << std::endl << "Finished motion, shutting down example" << std::endl;

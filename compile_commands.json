@@ -1,0 +1,682 @@
+[
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/control_loop.cpp.o -c /home/panda/libfranka/src/control_loop.cpp",
+  "file": "/home/panda/libfranka/src/control_loop.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/control_tools.cpp.o -c /home/panda/libfranka/src/control_tools.cpp",
+  "file": "/home/panda/libfranka/src/control_tools.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/control_types.cpp.o -c /home/panda/libfranka/src/control_types.cpp",
+  "file": "/home/panda/libfranka/src/control_types.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/duration.cpp.o -c /home/panda/libfranka/src/duration.cpp",
+  "file": "/home/panda/libfranka/src/duration.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/errors.cpp.o -c /home/panda/libfranka/src/errors.cpp",
+  "file": "/home/panda/libfranka/src/errors.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/exception.cpp.o -c /home/panda/libfranka/src/exception.cpp",
+  "file": "/home/panda/libfranka/src/exception.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/gripper.cpp.o -c /home/panda/libfranka/src/gripper.cpp",
+  "file": "/home/panda/libfranka/src/gripper.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/gripper_state.cpp.o -c /home/panda/libfranka/src/gripper_state.cpp",
+  "file": "/home/panda/libfranka/src/gripper_state.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/library_downloader.cpp.o -c /home/panda/libfranka/src/library_downloader.cpp",
+  "file": "/home/panda/libfranka/src/library_downloader.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/library_loader.cpp.o -c /home/panda/libfranka/src/library_loader.cpp",
+  "file": "/home/panda/libfranka/src/library_loader.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/load_calculations.cpp.o -c /home/panda/libfranka/src/load_calculations.cpp",
+  "file": "/home/panda/libfranka/src/load_calculations.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/log.cpp.o -c /home/panda/libfranka/src/log.cpp",
+  "file": "/home/panda/libfranka/src/log.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/logger.cpp.o -c /home/panda/libfranka/src/logger.cpp",
+  "file": "/home/panda/libfranka/src/logger.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/lowpass_filter.cpp.o -c /home/panda/libfranka/src/lowpass_filter.cpp",
+  "file": "/home/panda/libfranka/src/lowpass_filter.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/model.cpp.o -c /home/panda/libfranka/src/model.cpp",
+  "file": "/home/panda/libfranka/src/model.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/model_library.cpp.o -c /home/panda/libfranka/src/model_library.cpp",
+  "file": "/home/panda/libfranka/src/model_library.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/network.cpp.o -c /home/panda/libfranka/src/network.cpp",
+  "file": "/home/panda/libfranka/src/network.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/rate_limiting.cpp.o -c /home/panda/libfranka/src/rate_limiting.cpp",
+  "file": "/home/panda/libfranka/src/rate_limiting.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/robot.cpp.o -c /home/panda/libfranka/src/robot.cpp",
+  "file": "/home/panda/libfranka/src/robot.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/robot_impl.cpp.o -c /home/panda/libfranka/src/robot_impl.cpp",
+  "file": "/home/panda/libfranka/src/robot_impl.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/robot_state.cpp.o -c /home/panda/libfranka/src/robot_state.cpp",
+  "file": "/home/panda/libfranka/src/robot_state.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/vacuum_gripper.cpp.o -c /home/panda/libfranka/src/vacuum_gripper.cpp",
+  "file": "/home/panda/libfranka/src/vacuum_gripper.cpp"
+},
+{
+  "directory": "/home/panda/libfranka",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -Dfranka_EXPORTS -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3  -fPIC   -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/franka.dir/src/vacuum_gripper_state.cpp.o -c /home/panda/libfranka/src/vacuum_gripper_state.cpp",
+  "file": "/home/panda/libfranka/src/vacuum_gripper_state.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/calculations_tests.cpp.o -c /home/panda/libfranka/test/calculations_tests.cpp",
+  "file": "/home/panda/libfranka/test/calculations_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/control_loop_tests.cpp.o -c /home/panda/libfranka/test/control_loop_tests.cpp",
+  "file": "/home/panda/libfranka/test/control_loop_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/control_types_tests.cpp.o -c /home/panda/libfranka/test/control_types_tests.cpp",
+  "file": "/home/panda/libfranka/test/control_types_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/duration_tests.cpp.o -c /home/panda/libfranka/test/duration_tests.cpp",
+  "file": "/home/panda/libfranka/test/duration_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/errors_tests.cpp.o -c /home/panda/libfranka/test/errors_tests.cpp",
+  "file": "/home/panda/libfranka/test/errors_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/gripper_command_tests.cpp.o -c /home/panda/libfranka/test/gripper_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/gripper_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/gripper_tests.cpp.o -c /home/panda/libfranka/test/gripper_tests.cpp",
+  "file": "/home/panda/libfranka/test/gripper_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/helpers.cpp.o -c /home/panda/libfranka/test/helpers.cpp",
+  "file": "/home/panda/libfranka/test/helpers.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/logger_tests.cpp.o -c /home/panda/libfranka/test/logger_tests.cpp",
+  "file": "/home/panda/libfranka/test/logger_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/lowpass_filter_tests.cpp.o -c /home/panda/libfranka/test/lowpass_filter_tests.cpp",
+  "file": "/home/panda/libfranka/test/lowpass_filter_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/mock_server.cpp.o -c /home/panda/libfranka/test/mock_server.cpp",
+  "file": "/home/panda/libfranka/test/mock_server.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/model_tests.cpp.o -c /home/panda/libfranka/test/model_tests.cpp",
+  "file": "/home/panda/libfranka/test/model_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/rate_limiting_tests.cpp.o -c /home/panda/libfranka/test/rate_limiting_tests.cpp",
+  "file": "/home/panda/libfranka/test/rate_limiting_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/robot_command_tests.cpp.o -c /home/panda/libfranka/test/robot_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/robot_impl_tests.cpp.o -c /home/panda/libfranka/test/robot_impl_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_impl_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/robot_state_tests.cpp.o -c /home/panda/libfranka/test/robot_state_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_state_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/robot_tests.cpp.o -c /home/panda/libfranka/test/robot_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/vacuum_gripper_tests.cpp.o -c /home/panda/libfranka/test/vacuum_gripper_tests.cpp",
+  "file": "/home/panda/libfranka/test/vacuum_gripper_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=address -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_asan.dir/vacuum_gripper_command_tests.cpp.o -c /home/panda/libfranka/test/vacuum_gripper_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/vacuum_gripper_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/calculations_tests.cpp.o -c /home/panda/libfranka/test/calculations_tests.cpp",
+  "file": "/home/panda/libfranka/test/calculations_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/control_loop_tests.cpp.o -c /home/panda/libfranka/test/control_loop_tests.cpp",
+  "file": "/home/panda/libfranka/test/control_loop_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/control_types_tests.cpp.o -c /home/panda/libfranka/test/control_types_tests.cpp",
+  "file": "/home/panda/libfranka/test/control_types_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/duration_tests.cpp.o -c /home/panda/libfranka/test/duration_tests.cpp",
+  "file": "/home/panda/libfranka/test/duration_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/errors_tests.cpp.o -c /home/panda/libfranka/test/errors_tests.cpp",
+  "file": "/home/panda/libfranka/test/errors_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/gripper_command_tests.cpp.o -c /home/panda/libfranka/test/gripper_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/gripper_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/gripper_tests.cpp.o -c /home/panda/libfranka/test/gripper_tests.cpp",
+  "file": "/home/panda/libfranka/test/gripper_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/helpers.cpp.o -c /home/panda/libfranka/test/helpers.cpp",
+  "file": "/home/panda/libfranka/test/helpers.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/logger_tests.cpp.o -c /home/panda/libfranka/test/logger_tests.cpp",
+  "file": "/home/panda/libfranka/test/logger_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/lowpass_filter_tests.cpp.o -c /home/panda/libfranka/test/lowpass_filter_tests.cpp",
+  "file": "/home/panda/libfranka/test/lowpass_filter_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/mock_server.cpp.o -c /home/panda/libfranka/test/mock_server.cpp",
+  "file": "/home/panda/libfranka/test/mock_server.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/model_tests.cpp.o -c /home/panda/libfranka/test/model_tests.cpp",
+  "file": "/home/panda/libfranka/test/model_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/rate_limiting_tests.cpp.o -c /home/panda/libfranka/test/rate_limiting_tests.cpp",
+  "file": "/home/panda/libfranka/test/rate_limiting_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/robot_command_tests.cpp.o -c /home/panda/libfranka/test/robot_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/robot_impl_tests.cpp.o -c /home/panda/libfranka/test/robot_impl_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_impl_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/robot_state_tests.cpp.o -c /home/panda/libfranka/test/robot_state_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_state_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/robot_tests.cpp.o -c /home/panda/libfranka/test/robot_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/vacuum_gripper_tests.cpp.o -c /home/panda/libfranka/test/vacuum_gripper_tests.cpp",
+  "file": "/home/panda/libfranka/test/vacuum_gripper_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_ubsan.dir/vacuum_gripper_command_tests.cpp.o -c /home/panda/libfranka/test/vacuum_gripper_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/vacuum_gripper_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/calculations_tests.cpp.o -c /home/panda/libfranka/test/calculations_tests.cpp",
+  "file": "/home/panda/libfranka/test/calculations_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/control_loop_tests.cpp.o -c /home/panda/libfranka/test/control_loop_tests.cpp",
+  "file": "/home/panda/libfranka/test/control_loop_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/control_types_tests.cpp.o -c /home/panda/libfranka/test/control_types_tests.cpp",
+  "file": "/home/panda/libfranka/test/control_types_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/duration_tests.cpp.o -c /home/panda/libfranka/test/duration_tests.cpp",
+  "file": "/home/panda/libfranka/test/duration_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/errors_tests.cpp.o -c /home/panda/libfranka/test/errors_tests.cpp",
+  "file": "/home/panda/libfranka/test/errors_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/gripper_command_tests.cpp.o -c /home/panda/libfranka/test/gripper_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/gripper_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/gripper_tests.cpp.o -c /home/panda/libfranka/test/gripper_tests.cpp",
+  "file": "/home/panda/libfranka/test/gripper_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/helpers.cpp.o -c /home/panda/libfranka/test/helpers.cpp",
+  "file": "/home/panda/libfranka/test/helpers.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/logger_tests.cpp.o -c /home/panda/libfranka/test/logger_tests.cpp",
+  "file": "/home/panda/libfranka/test/logger_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/lowpass_filter_tests.cpp.o -c /home/panda/libfranka/test/lowpass_filter_tests.cpp",
+  "file": "/home/panda/libfranka/test/lowpass_filter_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/mock_server.cpp.o -c /home/panda/libfranka/test/mock_server.cpp",
+  "file": "/home/panda/libfranka/test/mock_server.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/model_tests.cpp.o -c /home/panda/libfranka/test/model_tests.cpp",
+  "file": "/home/panda/libfranka/test/model_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/rate_limiting_tests.cpp.o -c /home/panda/libfranka/test/rate_limiting_tests.cpp",
+  "file": "/home/panda/libfranka/test/rate_limiting_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/robot_command_tests.cpp.o -c /home/panda/libfranka/test/robot_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/robot_impl_tests.cpp.o -c /home/panda/libfranka/test/robot_impl_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_impl_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/robot_state_tests.cpp.o -c /home/panda/libfranka/test/robot_state_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_state_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/robot_tests.cpp.o -c /home/panda/libfranka/test/robot_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/vacuum_gripper_tests.cpp.o -c /home/panda/libfranka/test/vacuum_gripper_tests.cpp",
+  "file": "/home/panda/libfranka/test/vacuum_gripper_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/run_all_tests.dir/vacuum_gripper_command_tests.cpp.o -c /home/panda/libfranka/test/vacuum_gripper_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/vacuum_gripper_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/calculations_tests.cpp.o -c /home/panda/libfranka/test/calculations_tests.cpp",
+  "file": "/home/panda/libfranka/test/calculations_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/control_loop_tests.cpp.o -c /home/panda/libfranka/test/control_loop_tests.cpp",
+  "file": "/home/panda/libfranka/test/control_loop_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/control_types_tests.cpp.o -c /home/panda/libfranka/test/control_types_tests.cpp",
+  "file": "/home/panda/libfranka/test/control_types_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/duration_tests.cpp.o -c /home/panda/libfranka/test/duration_tests.cpp",
+  "file": "/home/panda/libfranka/test/duration_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/errors_tests.cpp.o -c /home/panda/libfranka/test/errors_tests.cpp",
+  "file": "/home/panda/libfranka/test/errors_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/gripper_command_tests.cpp.o -c /home/panda/libfranka/test/gripper_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/gripper_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/gripper_tests.cpp.o -c /home/panda/libfranka/test/gripper_tests.cpp",
+  "file": "/home/panda/libfranka/test/gripper_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/helpers.cpp.o -c /home/panda/libfranka/test/helpers.cpp",
+  "file": "/home/panda/libfranka/test/helpers.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/logger_tests.cpp.o -c /home/panda/libfranka/test/logger_tests.cpp",
+  "file": "/home/panda/libfranka/test/logger_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/lowpass_filter_tests.cpp.o -c /home/panda/libfranka/test/lowpass_filter_tests.cpp",
+  "file": "/home/panda/libfranka/test/lowpass_filter_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/mock_server.cpp.o -c /home/panda/libfranka/test/mock_server.cpp",
+  "file": "/home/panda/libfranka/test/mock_server.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/model_tests.cpp.o -c /home/panda/libfranka/test/model_tests.cpp",
+  "file": "/home/panda/libfranka/test/model_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/rate_limiting_tests.cpp.o -c /home/panda/libfranka/test/rate_limiting_tests.cpp",
+  "file": "/home/panda/libfranka/test/rate_limiting_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/robot_command_tests.cpp.o -c /home/panda/libfranka/test/robot_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/robot_impl_tests.cpp.o -c /home/panda/libfranka/test/robot_impl_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_impl_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/robot_state_tests.cpp.o -c /home/panda/libfranka/test/robot_state_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_state_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/robot_tests.cpp.o -c /home/panda/libfranka/test/robot_tests.cpp",
+  "file": "/home/panda/libfranka/test/robot_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/vacuum_gripper_tests.cpp.o -c /home/panda/libfranka/test/vacuum_gripper_tests.cpp",
+  "file": "/home/panda/libfranka/test/vacuum_gripper_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -DFRANKA_TEST_BINARY_DIR=\\\"/home/panda/libfranka/test\\\" -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/test -I/home/panda/libfranka/src -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/include -I/home/panda/libfranka/common/include -isystem /usr/include/eigen3    -Wall -Wextra -g -O1 -fsanitize=thread -pthread -std=gnu++14 -o CMakeFiles/run_all_tests_tsan.dir/vacuum_gripper_command_tests.cpp.o -c /home/panda/libfranka/test/vacuum_gripper_command_tests.cpp",
+  "file": "/home/panda/libfranka/test/vacuum_gripper_command_tests.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/test",
+  "command": "/usr/bin/c++  -Dfcimodels_EXPORTS -I/home/panda/libfranka/test -I/home/panda/libfranka/src  -fPIC   -Wall -Wextra -std=gnu++14 -o CMakeFiles/fcimodels.dir/libfcimodels_stub.cpp.o -c /home/panda/libfranka/test/libfcimodels_stub.cpp",
+  "file": "/home/panda/libfranka/test/libfcimodels_stub.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/googletest",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/3rdparty/googletest/googlemock -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googletest     -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -std=gnu++14 -o CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o -c /home/panda/libfranka/3rdparty/googletest/googletest/src/gtest-all.cc",
+  "file": "/home/panda/libfranka/3rdparty/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/panda/libfranka/googletest",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/3rdparty/googletest/googlemock -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googletest     -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -std=gnu++14 -o CMakeFiles/gmock_main.dir/src/gmock-all.cc.o -c /home/panda/libfranka/3rdparty/googletest/googlemock/src/gmock-all.cc",
+  "file": "/home/panda/libfranka/3rdparty/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/panda/libfranka/googletest",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/3rdparty/googletest/googlemock -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googletest     -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -std=gnu++14 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/panda/libfranka/3rdparty/googletest/googlemock/src/gmock_main.cc",
+  "file": "/home/panda/libfranka/3rdparty/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/panda/libfranka/googletest",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/3rdparty/googletest/googlemock -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googletest     -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -std=gnu++14 -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o -c /home/panda/libfranka/3rdparty/googletest/googletest/src/gtest-all.cc",
+  "file": "/home/panda/libfranka/3rdparty/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/panda/libfranka/googletest",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/3rdparty/googletest/googlemock/include -I/home/panda/libfranka/3rdparty/googletest/googlemock -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googletest     -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -std=gnu++14 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/panda/libfranka/3rdparty/googletest/googlemock/src/gmock-all.cc",
+  "file": "/home/panda/libfranka/3rdparty/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/panda/libfranka/googletest/gtest",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googletest     -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -std=gnu++14 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/panda/libfranka/3rdparty/googletest/googletest/src/gtest_main.cc",
+  "file": "/home/panda/libfranka/3rdparty/googletest/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/panda/libfranka/googletest/gtest",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/3rdparty/googletest/googletest/include -I/home/panda/libfranka/3rdparty/googletest/googletest     -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -std=gnu++14 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/panda/libfranka/3rdparty/googletest/googletest/src/gtest-all.cc",
+  "file": "/home/panda/libfranka/3rdparty/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -pthread -std=gnu++14 -o CMakeFiles/joint_impedance_control.dir/joint_impedance_control.cpp.o -c /home/panda/libfranka/examples/joint_impedance_control.cpp",
+  "file": "/home/panda/libfranka/examples/joint_impedance_control.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/generate_consecutive_motions.dir/generate_consecutive_motions.cpp.o -c /home/panda/libfranka/examples/generate_consecutive_motions.cpp",
+  "file": "/home/panda/libfranka/examples/generate_consecutive_motions.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/examples_common.dir/examples_common.cpp.o -c /home/panda/libfranka/examples/examples_common.cpp",
+  "file": "/home/panda/libfranka/examples/examples_common.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/gripper_release.dir/gripper_release.cpp.o -c /home/panda/libfranka/examples/gripper_release.cpp",
+  "file": "/home/panda/libfranka/examples/gripper_release.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/generate_joint_position_motion.dir/generate_joint_position_motion.cpp.o -c /home/panda/libfranka/examples/generate_joint_position_motion.cpp",
+  "file": "/home/panda/libfranka/examples/generate_joint_position_motion.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/generate_cartesian_pose_motion.dir/generate_cartesian_pose_motion.cpp.o -c /home/panda/libfranka/examples/generate_cartesian_pose_motion.cpp",
+  "file": "/home/panda/libfranka/examples/generate_cartesian_pose_motion.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/generate_cartesian_velocity_motion.dir/generate_cartesian_velocity_motion.cpp.o -c /home/panda/libfranka/examples/generate_cartesian_velocity_motion.cpp",
+  "file": "/home/panda/libfranka/examples/generate_cartesian_velocity_motion.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/force_control.dir/force_control.cpp.o -c /home/panda/libfranka/examples/force_control.cpp",
+  "file": "/home/panda/libfranka/examples/force_control.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/up_down.dir/up_down.cpp.o -c /home/panda/libfranka/examples/up_down.cpp",
+  "file": "/home/panda/libfranka/examples/up_down.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/echo_robot_state.dir/echo_robot_state.cpp.o -c /home/panda/libfranka/examples/echo_robot_state.cpp",
+  "file": "/home/panda/libfranka/examples/echo_robot_state.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/generate_joint_velocity_motion.dir/generate_joint_velocity_motion.cpp.o -c /home/panda/libfranka/examples/generate_joint_velocity_motion.cpp",
+  "file": "/home/panda/libfranka/examples/generate_joint_velocity_motion.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/follow_moveit_traj.dir/follow_moveit_traj.cpp.o -c /home/panda/libfranka/examples/follow_moveit_traj.cpp",
+  "file": "/home/panda/libfranka/examples/follow_moveit_traj.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/cartesian_impedance_control.dir/cartesian_impedance_control.cpp.o -c /home/panda/libfranka/examples/cartesian_impedance_control.cpp",
+  "file": "/home/panda/libfranka/examples/cartesian_impedance_control.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/gripper_homing.dir/gripper_homing.cpp.o -c /home/panda/libfranka/examples/gripper_homing.cpp",
+  "file": "/home/panda/libfranka/examples/gripper_homing.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/joint_point_to_point_motion.dir/joint_point_to_point_motion.cpp.o -c /home/panda/libfranka/examples/joint_point_to_point_motion.cpp",
+  "file": "/home/panda/libfranka/examples/joint_point_to_point_motion.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/grasp_object.dir/grasp_object.cpp.o -c /home/panda/libfranka/examples/grasp_object.cpp",
+  "file": "/home/panda/libfranka/examples/grasp_object.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/go_to_first_pose.dir/go_to_first_pose.cpp.o -c /home/panda/libfranka/examples/go_to_first_pose.cpp",
+  "file": "/home/panda/libfranka/examples/go_to_first_pose.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/generate_elbow_motion.dir/generate_elbow_motion.cpp.o -c /home/panda/libfranka/examples/generate_elbow_motion.cpp",
+  "file": "/home/panda/libfranka/examples/generate_elbow_motion.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/cpptest.dir/cpptest.cpp.o -c /home/panda/libfranka/examples/cpptest.cpp",
+  "file": "/home/panda/libfranka/examples/cpptest.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++  -DPOCO_NO_AUTOMATIC_LIBS -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/motion_with_control.dir/motion_with_control.cpp.o -c /home/panda/libfranka/examples/motion_with_control.cpp",
+  "file": "/home/panda/libfranka/examples/motion_with_control.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/print_joint_poses.dir/print_joint_poses.cpp.o -c /home/panda/libfranka/examples/print_joint_poses.cpp",
+  "file": "/home/panda/libfranka/examples/print_joint_poses.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/communication_test.dir/communication_test.cpp.o -c /home/panda/libfranka/examples/communication_test.cpp",
+  "file": "/home/panda/libfranka/examples/communication_test.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/follow_good_traj_sphere.dir/follow_good_traj_sphere.cpp.o -c /home/panda/libfranka/examples/follow_good_traj_sphere.cpp",
+  "file": "/home/panda/libfranka/examples/follow_good_traj_sphere.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/vacuum_object.dir/vacuum_object.cpp.o -c /home/panda/libfranka/examples/vacuum_object.cpp",
+  "file": "/home/panda/libfranka/examples/vacuum_object.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/franka_grasp_with_traj.dir/franka_grasp_with_traj.cpp.o -c /home/panda/libfranka/examples/franka_grasp_with_traj.cpp",
+  "file": "/home/panda/libfranka/examples/franka_grasp_with_traj.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/move_to_neutral.dir/move_to_neutral.cpp.o -c /home/panda/libfranka/examples/move_to_neutral.cpp",
+  "file": "/home/panda/libfranka/examples/move_to_neutral.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/move_over_box.dir/move_over_box.cpp.o -c /home/panda/libfranka/examples/move_over_box.cpp",
+  "file": "/home/panda/libfranka/examples/move_over_box.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/cartesian_pose_motion_app.dir/cartesian_pose_motion_app.cpp.o -c /home/panda/libfranka/examples/cartesian_pose_motion_app.cpp",
+  "file": "/home/panda/libfranka/examples/cartesian_pose_motion_app.cpp"
+},
+{
+  "directory": "/home/panda/libfranka/examples",
+  "command": "/usr/bin/c++   -I/home/panda/libfranka/include -isystem /usr/include/eigen3    -Wall -Wextra -std=gnu++14 -o CMakeFiles/follow_good_traj.dir/follow_good_traj.cpp.o -c /home/panda/libfranka/examples/follow_good_traj.cpp",
+  "file": "/home/panda/libfranka/examples/follow_good_traj.cpp"
+}
+]

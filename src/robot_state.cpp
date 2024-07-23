@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include "franka/robot_state.h"
 
@@ -18,8 +18,6 @@ std::ostream& operator<<(std::ostream& ostream, const std::array<T, N>& array) {
   ostream << "]";
   return ostream;
 }
-
-}  // anonymous namespace
 
 std::ostream& operator<<(std::ostream& ostream, const RobotMode robot_mode) {
   ostream << "\"";
@@ -50,6 +48,8 @@ std::ostream& operator<<(std::ostream& ostream, const RobotMode robot_mode) {
   return ostream;
 }
 
+}  // anonymous namespace
+
 std::ostream& operator<<(std::ostream& ostream, const franka::RobotState& robot_state) {
   ostream << "{\"O_T_EE\": " << robot_state.O_T_EE << ", \"O_T_EE_d\": " << robot_state.O_T_EE_d
           << ", \"F_T_NE\": " << robot_state.F_T_NE << ", \"NE_T_EE\": " << robot_state.NE_T_EE
@@ -75,7 +75,7 @@ std::ostream& operator<<(std::ostream& ostream, const franka::RobotState& robot_
           << ", \"O_F_ext_hat_K\": " << robot_state.O_F_ext_hat_K
           << ", \"K_F_ext_hat_K\": " << robot_state.K_F_ext_hat_K
           << ", \"O_dP_EE_d\": " << robot_state.O_dP_EE_d
-          << ", \"O_ddP_O\": " << robot_state.O_ddP_O << ", \"O_T_EE_c\": " << robot_state.O_T_EE_c
+          << ", \"O_T_EE_c\": " << robot_state.O_T_EE_c
           << ", \"O_dP_EE_c\": " << robot_state.O_dP_EE_c
           << ", \"O_ddP_EE_c\": " << robot_state.O_ddP_EE_c << ", \"theta\": " << robot_state.theta
           << ", \"dtheta\": " << robot_state.dtheta

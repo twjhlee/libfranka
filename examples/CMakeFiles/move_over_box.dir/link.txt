@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/move_over_box.dir/move_over_box.cpp.o  -o move_over_box  -Wl,-rpath,/home/panda/libfranka: libexamples_common.a ../libfranka.so.0.8.0 -lrealsense2 

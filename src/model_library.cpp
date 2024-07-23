@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include "model_library.h"
 
@@ -17,6 +17,7 @@ ModelLibrary::ModelLibrary(franka::Network& network)
       body_jacobian_joint7{reinterpret_cast<decltype(&Ji_J_J7)>(loader_.getSymbol("Ji_J_J7"))},
       body_jacobian_flange{reinterpret_cast<decltype(&Ji_J_J8)>(loader_.getSymbol("Ji_J_J8"))},
       body_jacobian_ee{reinterpret_cast<decltype(&Ji_J_J9)>(loader_.getSymbol("Ji_J_J9"))},
+      mass{reinterpret_cast<decltype(&M_NE)>(loader_.getSymbol("M_NE"))},
       zero_jacobian_joint1{reinterpret_cast<decltype(&O_J_J1)>(loader_.getSymbol("O_J_J1"))},
       zero_jacobian_joint2{reinterpret_cast<decltype(&O_J_J2)>(loader_.getSymbol("O_J_J2"))},
       zero_jacobian_joint3{reinterpret_cast<decltype(&O_J_J3)>(loader_.getSymbol("O_J_J3"))},
@@ -34,5 +35,8 @@ ModelLibrary::ModelLibrary(franka::Network& network)
       joint6{reinterpret_cast<decltype(&O_T_J6)>(loader_.getSymbol("O_T_J6"))},
       joint7{reinterpret_cast<decltype(&O_T_J7)>(loader_.getSymbol("O_T_J7"))},
       flange{reinterpret_cast<decltype(&O_T_J8)>(loader_.getSymbol("O_T_J8"))},
-      ee{reinterpret_cast<decltype(&O_T_J9)>(loader_.getSymbol("O_T_J9"))} {}
+      ee{reinterpret_cast<decltype(&O_T_J9)>(loader_.getSymbol("O_T_J9"))},
+      coriolis{reinterpret_cast<decltype(&c_NE)>(loader_.getSymbol("c_NE"))},
+      gravity{reinterpret_cast<decltype(&g_NE)>(loader_.getSymbol("g_NE"))} {}
+
 }  // namespace franka

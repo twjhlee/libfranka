@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #pragma once
 
@@ -18,11 +18,7 @@
 
 #include <franka/exception.h>
 
-#include <research_interface/robot/service_types.h>
-
 namespace franka {
-
-constexpr std::chrono::milliseconds kTimeout{10};
 
 class Network {
  public:
@@ -127,7 +123,7 @@ T Network::udpBlockingReceiveUnsafe() try {
   int bytes_received =
       udp_socket_.receiveFrom(buffer.data(), static_cast<int>(buffer.size()), udp_server_address_);
 
-  if (bytes_received != static_cast<int>(buffer.size())) {
+  if (bytes_received != buffer.size()) {
     throw ProtocolException("libfranka: incorrect object size");
   }
 
@@ -152,10 +148,6 @@ void Network::udpSend(const T& data) try {
 
 template <typename T>
 void Network::tcpReadFromBuffer(std::chrono::microseconds timeout) try {
-  if (tcp_socket_.poll(0, Poco::Net::Socket::SELECT_ERROR)) {
-    throw NetworkException("libfranka: TCP connection got interrupted.");
-  }
-
   if (!tcp_socket_.poll(timeout.count(), Poco::Net::Socket::SELECT_READ)) {
     return;
   }
@@ -199,13 +191,7 @@ uint32_t Network::tcpSendRequest(TArgs&&... args) try {
                          sizeof(typename T::template Message<typename T::Request>)),
       typename T::Request(std::forward<TArgs>(args)...));
 
-  // NOLINTNEXTLINE
-  if constexpr (std::is_same_v<T, research_interface::robot::GetRobotModel>) {
-    auto serialized_request = message.serialize();
-    tcp_socket_.sendBytes(serialized_request.data(), serialized_request.size());
-  } else {  // NOLINT(readability-misleading-indentation)
-    tcp_socket_.sendBytes(&message, sizeof(message));
-  }
+  tcp_socket_.sendBytes(&message, sizeof(message));
 
   return message.header.command_id;
 } catch (const Poco::Exception& e) {
@@ -223,7 +209,7 @@ bool Network::tcpReceiveResponse(uint32_t command_id,
   }
 
   tcpReadFromBuffer<T>(0us);
-  auto it = received_responses_.find(command_id);
+  decltype(received_responses_)::const_iterator it = received_responses_.find(command_id);
   if (it != received_responses_.end()) {
     auto message = reinterpret_cast<const typename T::template Message<typename T::Response>*>(
         it->second.data());
@@ -245,7 +231,7 @@ typename T::Response Network::tcpBlockingReceiveResponse(uint32_t command_id,
   decltype(received_responses_)::const_iterator it;
   do {
     lock.lock();
-    tcpReadFromBuffer<T>(kTimeout);
+    tcpReadFromBuffer<T>(10ms);
     it = received_responses_.find(command_id);
     lock.unlock();
     std::this_thread::yield();
@@ -266,31 +252,6 @@ typename T::Response Network::tcpBlockingReceiveResponse(uint32_t command_id,
 
   received_responses_.erase(it);
   return message.getInstance();
-}
-
-template <>
-inline research_interface::robot::GetRobotModel::Response
-Network::tcpBlockingReceiveResponse<research_interface::robot::GetRobotModel>(
-    uint32_t command_id,
-    std::vector<uint8_t>* /*vl_buffer*/) {
-  using namespace std::literals::chrono_literals;  // NOLINT(google-build-using-namespace)
-  std::unique_lock<std::mutex> lock(tcp_mutex_, std::defer_lock);
-  decltype(received_responses_)::const_iterator it;
-  do {
-    lock.lock();
-    tcpReadFromBuffer<research_interface::robot::GetRobotModel>(kTimeout);
-    it = received_responses_.find(command_id);
-    lock.unlock();
-    std::this_thread::yield();
-  } while (it == received_responses_.end());
-
-  auto get_robot_model =
-      research_interface::robot::GetRobotModel::Message<
-          research_interface::robot::GetRobotModel::Response>::deserialize(it->second)
-          .getInstance();
-
-  received_responses_.erase(it);
-  return get_robot_model;
 }
 
 template <typename T, uint16_t kLibraryVersion>

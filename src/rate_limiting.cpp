@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <franka/rate_limiting.h>
 
@@ -73,8 +73,7 @@ std::array<double, 7> limitRate(const std::array<double, 7>& max_derivatives,
   return limited_values;
 }
 
-double limitRate(double upper_limits_velocity,
-                 double lower_limits_velocity,
+double limitRate(double max_velocity,
                  double max_acceleration,
                  double max_jerk,
                  double commanded_velocity,
@@ -93,12 +92,10 @@ double limitRate(double upper_limits_velocity,
                                   std::max(std::min(commanded_jerk, max_jerk), -max_jerk) * kDeltaT;
 
   // Compute acceleration limits
-  double safe_max_acceleration =
-      std::min((max_jerk / max_acceleration) * (upper_limits_velocity - last_commanded_velocity),
-               max_acceleration);
-  double safe_min_acceleration =
-      std::max((max_jerk / max_acceleration) * (lower_limits_velocity - last_commanded_velocity),
-               -max_acceleration);
+  double safe_max_acceleration = std::min(
+      (max_jerk / max_acceleration) * (max_velocity - last_commanded_velocity), max_acceleration);
+  double safe_min_acceleration = std::max(
+      (max_jerk / max_acceleration) * (-max_velocity - last_commanded_velocity), -max_acceleration);
 
   // Limit acceleration and integrate to get desired velocities
   return last_commanded_velocity +
@@ -106,8 +103,7 @@ double limitRate(double upper_limits_velocity,
              kDeltaT;
 }
 
-double limitRate(double upper_limits_velocity,
-                 double lower_limits_velocity,
+double limitRate(double max_velocity,
                  double max_acceleration,
                  double max_jerk,
                  double commanded_position,
@@ -118,14 +114,13 @@ double limitRate(double upper_limits_velocity,
     throw std::invalid_argument("commanded_position is infinite or NaN.");
   }
   return last_commanded_position +
-         limitRate(upper_limits_velocity, lower_limits_velocity, max_acceleration, max_jerk,
+         limitRate(max_velocity, max_acceleration, max_jerk,
                    (commanded_position - last_commanded_position) / kDeltaT,
                    last_commanded_velocity, last_commanded_acceleration) *
              kDeltaT;
 }
 
-std::array<double, 7> limitRate(const std::array<double, 7>& upper_limits_velocity,
-                                const std::array<double, 7>& lower_limits_velocity,
+std::array<double, 7> limitRate(const std::array<double, 7>& max_velocity,
                                 const std::array<double, 7>& max_acceleration,
                                 const std::array<double, 7>& max_jerk,
                                 const std::array<double, 7>& commanded_velocities,
@@ -138,15 +133,14 @@ std::array<double, 7> limitRate(const std::array<double, 7>& upper_limits_veloci
   std::array<double, 7> limited_commanded_velocities{};
 
   for (size_t i = 0; i < 7; i++) {
-    limited_commanded_velocities[i] = limitRate(
-        upper_limits_velocity[i], lower_limits_velocity[i], max_acceleration[i], max_jerk[i],
-        commanded_velocities[i], last_commanded_velocities[i], last_commanded_accelerations[i]);
+    limited_commanded_velocities[i] =
+        limitRate(max_velocity[i], max_acceleration[i], max_jerk[i], commanded_velocities[i],
+                  last_commanded_velocities[i], last_commanded_accelerations[i]);
   }
   return limited_commanded_velocities;
 }
 
-std::array<double, 7> limitRate(const std::array<double, 7>& upper_limits_velocity,
-                                const std::array<double, 7>& lower_limits_velocity,
+std::array<double, 7> limitRate(const std::array<double, 7>& max_velocity,
                                 const std::array<double, 7>& max_acceleration,
                                 const std::array<double, 7>& max_jerk,
                                 const std::array<double, 7>& commanded_positions,
@@ -159,10 +153,9 @@ std::array<double, 7> limitRate(const std::array<double, 7>& upper_limits_veloci
   }
   std::array<double, 7> limited_commanded_positions{};
   for (size_t i = 0; i < 7; i++) {
-    limited_commanded_positions[i] =
-        limitRate(upper_limits_velocity[i], lower_limits_velocity[i], max_acceleration[i],
-                  max_jerk[i], commanded_positions[i], last_commanded_positions[i],
-                  last_commanded_velocities[i], last_commanded_accelerations[i]);
+    limited_commanded_positions[i] = limitRate(
+        max_velocity[i], max_acceleration[i], max_jerk[i], commanded_positions[i],
+        last_commanded_positions[i], last_commanded_velocities[i], last_commanded_accelerations[i]);
   }
   return limited_commanded_positions;
 }
@@ -221,8 +214,8 @@ std::array<double, 16> limitRate(
   dx.head(3) << (commanded_pose.translation() - last_commanded_pose.translation()) / kDeltaT;
 
   // Compute rotational velocity
-  Eigen::AngleAxisd rot_difference(commanded_pose.rotation() *
-                                   last_commanded_pose.rotation().transpose());
+  Eigen::AngleAxisd rot_difference(commanded_pose.linear() *
+                                   last_commanded_pose.linear().transpose());
   dx.tail(3) << rot_difference.axis() * rot_difference.angle() / kDeltaT;
 
   // Limit the rate of the twist
@@ -238,7 +231,7 @@ std::array<double, 16> limitRate(
 
   // Integrate limited twist
   limited_commanded_pose.translation() << last_commanded_pose.translation() + dx.head(3) * kDeltaT;
-  limited_commanded_pose.linear() << last_commanded_pose.rotation();
+  limited_commanded_pose.linear() << last_commanded_pose.linear();
   if (dx.tail(3).norm() > kNormEps) {
     Eigen::Matrix3d omega_skew;
     Eigen::Vector3d w_norm(dx.tail(3) / dx.tail(3).norm());
@@ -247,7 +240,7 @@ std::array<double, 16> limitRate(
     // NOLINTNEXTLINE(readability-identifier-naming)
     Eigen::Matrix3d R = Eigen::Matrix3d::Identity() + sin(theta) * omega_skew +
                         (1.0 - cos(theta)) * (omega_skew * omega_skew);
-    limited_commanded_pose.linear() << R * last_commanded_pose.rotation();
+    limited_commanded_pose.linear() << R * last_commanded_pose.linear();
   }
 
   std::array<double, 16> limited_values{};

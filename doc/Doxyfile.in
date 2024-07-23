@@ -51,7 +51,7 @@ PROJECT_BRIEF          = "FCI C++ API"
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = @CMAKE_CURRENT_SOURCE_DIR@/Logo_FRANKA_ROBOTICS_dark.png
+PROJECT_LOGO           = @CMAKE_CURRENT_SOURCE_DIR@/Logo_FRANKA_EMIKA_dark.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -152,7 +152,7 @@ FULL_PATH_NAMES        = YES
 # will be relative from the directory where doxygen is started.
 # This tag requires that the tag FULL_PATH_NAMES is set to YES.
 
-STRIP_FROM_PATH        = @CMAKE_CURRENT_SOURCE_DIR@/.. @CMAKE_BINARY_DIR@
+STRIP_FROM_PATH        = @CMAKE_SOURCE_DIR@ @CMAKE_BINARY_DIR@
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of the
 # path mentioned in the documentation of a class, which tells the reader which
@@ -743,7 +743,7 @@ WARN_NO_PARAMDOC       = YES
 # a warning is encountered.
 # The default value is: NO.
 
-WARN_AS_ERROR          = NO
+WARN_AS_ERROR          = @DOXYGEN_WARN_AS_ERROR@
 
 # The WARN_FORMAT tag determines the format of the warning messages that doxygen
 # can produce. The string should contain the $file, $line, and $text tags, which
@@ -771,7 +771,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = @CMAKE_CURRENT_SOURCE_DIR@/main.md @DOXYGEN_SOURCE_DIRS@
+INPUT                  = @CMAKE_SOURCE_DIR@/doc/main.md @DOXYGEN_SOURCE_DIRS@
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -2104,6 +2104,12 @@ EXTERNAL_GROUPS        = YES
 
 EXTERNAL_PAGES         = YES
 
+# The PERL_PATH should be the absolute path and name of the perl script
+# interpreter (i.e. the result of 'which perl').
+# The default file (with absolute path) is: /usr/bin/perl.
+
+PERL_PATH              = /usr/bin/perl
+
 #---------------------------------------------------------------------------
 # Configuration options related to the dot tool
 #---------------------------------------------------------------------------
@@ -2116,6 +2122,15 @@ EXTERNAL_PAGES         = YES
 # The default value is: YES.
 
 CLASS_DIAGRAMS         = YES
+
+# You can define message sequence charts within doxygen comments using the \msc
+# command. Doxygen will then run the mscgen tool (see:
+# http://www.mcternan.me.uk/mscgen/)) to produce the chart and insert it in the
+# documentation. The MSCGEN_PATH tag allows you to specify the directory where
+# the mscgen tool resides. If left empty the tool is assumed to be found in the
+# default search path.
+
+MSCGEN_PATH            =
 
 # You can include diagrams made with dia in doxygen documentation. Doxygen will
 # then run dia to produce the diagram and insert it in the documentation. The

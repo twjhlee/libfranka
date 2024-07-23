@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2019 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 
 #include <Eigen/Dense>
@@ -46,8 +46,8 @@ std::array<double, 16> cartesianLowpassFilter(double sample_time,
   }
   Eigen::Affine3d transform(Eigen::Matrix4d::Map(y.data()));
   Eigen::Affine3d transform_last(Eigen::Matrix4d::Map(y_last.data()));
-  Eigen::Quaterniond orientation(transform.rotation());
-  Eigen::Quaterniond orientation_last(transform_last.rotation());
+  Eigen::Quaterniond orientation(transform.linear());
+  Eigen::Quaterniond orientation_last(transform_last.linear());
 
   double gain = sample_time / (sample_time + (1.0 / (2.0 * M_PI * cutoff_frequency)));
   transform.translation() =

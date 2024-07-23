@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #pragma once
 
@@ -17,7 +17,7 @@
  */
 
 /**
- * Sets a default collision behavior, joint impedance and Cartesian impedance.
+ * Sets a default collision behavior, joint impedance, Cartesian impedance, and filter frequency.
  *
  * @param[in] robot Robot instance to set behavior on.
  */

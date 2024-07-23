@@ -1,10 +1,8 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include "robot_impl.h"
 
 #include <sstream>
-
-#include <franka/control_tools.h>
 
 #include "load_calculations.h"
 
@@ -90,35 +88,8 @@ RobotState Robot::Impl::readOnce() {
   research_interface::robot::RobotState robot_state;
   while (network_->udpReceive<decltype(robot_state)>(&robot_state)) {
   }
-  current_state_ = convertRobotState(receiveRobotState());
-  return current_state_;
-}
 
-void Robot::Impl::writeOnce(const Torques& control_input) {
-  research_interface::robot::ControllerCommand control_command =
-      createControllerCommand(control_input);
-  research_interface::robot::MotionGeneratorCommand motion_command{};
-  motion_command.dq_c = {0, 0, 0, 0, 0, 0, 0};
-
-  network_->tcpThrowIfConnectionClosed();
-
-  sendRobotCommand(&motion_command, &control_command);
-}
-
-template <typename MotionGeneratorType>
-void Robot::Impl::writeOnce(const MotionGeneratorType& motion_generator_input,
-                            const Torques& control_input) {
-  auto motion_command = createMotionCommand(motion_generator_input);
-  auto control_command = createControllerCommand(control_input);
-  network_->tcpThrowIfConnectionClosed();
-  sendRobotCommand(&motion_command, &control_command);
-}
-
-template <typename MotionGeneratorType>
-void Robot::Impl::writeOnce(const MotionGeneratorType& motion_generator_input) {
-  auto motion_command = createMotionCommand(motion_generator_input);
-  network_->tcpThrowIfConnectionClosed();
-  sendRobotCommand(&motion_command, nullptr);
+  return convertRobotState(receiveRobotState());
 }
 
 research_interface::robot::RobotCommand Robot::Impl::sendRobotCommand(
@@ -183,7 +154,6 @@ research_interface::robot::RobotState Robot::Impl::receiveRobotState() {
 }
 
 void Robot::Impl::updateState(const research_interface::robot::RobotState& robot_state) {
-  robot_mode_ = robot_state.robot_mode;
   motion_generator_mode_ = robot_state.motion_generator_mode;
   controller_mode_ = robot_state.controller_mode;
   message_id_ = robot_state.message_id;
@@ -313,83 +283,6 @@ void Robot::Impl::finishMotion(
   current_move_controller_mode_ = research_interface::robot::ControllerMode::kOther;
 }
 
-void Robot::Impl::finishMotion(uint32_t motion_id, const Torques& control_input) {
-  research_interface::robot::MotionGeneratorCommand motion_command{};
-  motion_command.dq_c = {0, 0, 0, 0, 0, 0, 0};
-
-  research_interface::robot::ControllerCommand controller_command =
-      createControllerCommand(control_input);
-
-  finishMotion(motion_id, &motion_command, &controller_command);
-}
-research_interface::robot::MotionGeneratorCommand Robot::Impl::createMotionCommand(
-    const JointPositions& motion_input) {
-  checkFinite(motion_input.q);
-
-  research_interface::robot::MotionGeneratorCommand motion_command{};
-  motion_command.q_c = motion_input.q;
-
-  return motion_command;
-}
-
-research_interface::robot::MotionGeneratorCommand Robot::Impl::createMotionCommand(
-    const JointVelocities& motion_input) {
-  checkFinite(motion_input.dq);
-
-  research_interface::robot::MotionGeneratorCommand motion_command{};
-  motion_command.dq_c = motion_input.dq;
-
-  return motion_command;
-}
-
-research_interface::robot::MotionGeneratorCommand Robot::Impl::createMotionCommand(
-    const CartesianPose& motion_input) {
-  checkMatrix(motion_input.O_T_EE);
-
-  research_interface::robot::MotionGeneratorCommand motion_command{};
-  motion_command.O_T_EE_c = motion_input.O_T_EE;
-
-  if (motion_input.hasElbow()) {
-    motion_command.valid_elbow = true;
-    motion_command.elbow_c = motion_input.elbow;
-    checkElbow(motion_command.elbow_c);
-  } else {
-    motion_command.valid_elbow = false;
-    motion_command.elbow_c = {};
-  }
-
-  return motion_command;
-}
-
-research_interface::robot::MotionGeneratorCommand Robot::Impl::createMotionCommand(
-    const CartesianVelocities& motion_input) {
-  checkFinite(motion_input.O_dP_EE);
-
-  research_interface::robot::MotionGeneratorCommand motion_command{};
-  motion_command.O_dP_EE_c = motion_input.O_dP_EE;
-
-  if (motion_input.hasElbow()) {
-    motion_command.valid_elbow = true;
-    motion_command.elbow_c = motion_input.elbow;
-    checkElbow(motion_command.elbow_c);
-  } else {
-    motion_command.valid_elbow = false;
-    motion_command.elbow_c = {};
-  }
-
-  return motion_command;
-}
-
-research_interface::robot::ControllerCommand Robot::Impl::createControllerCommand(
-    const Torques& control_input) {
-  checkFinite(control_input.tau_J);
-
-  research_interface::robot::ControllerCommand control_command{};
-  control_command.tau_J_d = control_input.tau_J;
-
-  return control_command;
-}
-
 void Robot::Impl::cancelMotion(uint32_t motion_id) {
   try {
     executeCommand<research_interface::robot::StopMove>();
@@ -409,13 +302,8 @@ void Robot::Impl::cancelMotion(uint32_t motion_id) {
   current_move_controller_mode_ = research_interface::robot::ControllerMode::kOther;
 }
 
-Model Robot::Impl::loadModel(const std::string& urdf_model) const {
-  return Model(*network_, urdf_model);
-}
-
-// for the tests
-Model Robot::Impl::loadModel(std::unique_ptr<RobotModelBase> robot_model) const {
-  return Model(*network_, std::move(robot_model));
+Model Robot::Impl::loadModel() const {
+  return Model(*network_);
 }
 
 RobotState convertRobotState(const research_interface::robot::RobotState& robot_state) noexcept {
@@ -459,7 +347,6 @@ RobotState convertRobotState(const research_interface::robot::RobotState& robot_
   converted.O_F_ext_hat_K = robot_state.O_F_ext_hat_K;
   converted.K_F_ext_hat_K = robot_state.K_F_ext_hat_K;
   converted.O_dP_EE_d = robot_state.O_dP_EE_d;
-  converted.O_ddP_O = robot_state.O_ddP_O;
   converted.O_T_EE_c = robot_state.O_T_EE_c;
   converted.O_dP_EE_c = robot_state.O_dP_EE_c;
   converted.O_ddP_EE_c = robot_state.O_ddP_EE_c;
@@ -496,62 +383,6 @@ RobotState convertRobotState(const research_interface::robot::RobotState& robot_
   }
 
   return converted;
-}
-
-template void Robot::Impl::writeOnce<JointPositions>(const JointPositions& motion_generator_input);
-template void Robot::Impl::writeOnce<JointVelocities>(
-    const JointVelocities& motion_generator_input);
-template void Robot::Impl::writeOnce<CartesianPose>(const CartesianPose& motion_generator_input);
-template void Robot::Impl::writeOnce<CartesianVelocities>(
-    const CartesianVelocities& motion_generator_input);
-
-template void Robot::Impl::writeOnce<JointPositions>(const JointPositions& motion_generator_input,
-                                                     const Torques& control_input);
-
-template void Robot::Impl::writeOnce<JointVelocities>(const JointVelocities& motion_generator_input,
-                                                      const Torques& control_input);
-
-template void Robot::Impl::writeOnce<CartesianPose>(const CartesianPose& motion_generator_input,
-                                                    const Torques& control_input);
-
-template void Robot::Impl::writeOnce<CartesianVelocities>(
-    const CartesianVelocities& motion_generator_input,
-    const Torques& control_input);
-
-void Robot::Impl::writeOnce(const JointPositions& motion_generator_input) {
-  writeOnce<JointPositions>(motion_generator_input);
-}
-
-void Robot::Impl::writeOnce(const JointVelocities& motion_generator_input) {
-  writeOnce<JointVelocities>(motion_generator_input);
-}
-
-void Robot::Impl::writeOnce(const CartesianPose& motion_generator_input) {
-  writeOnce<CartesianPose>(motion_generator_input);
-}
-
-void Robot::Impl::writeOnce(const CartesianVelocities& motion_generator_input) {
-  writeOnce<CartesianVelocities>(motion_generator_input);
-}
-
-void Robot::Impl::writeOnce(const JointPositions& motion_generator_input,
-                            const Torques& control_input) {
-  writeOnce<JointPositions>(motion_generator_input, control_input);
-}
-
-void Robot::Impl::writeOnce(const JointVelocities& motion_generator_input,
-                            const Torques& control_input) {
-  writeOnce<JointVelocities>(motion_generator_input, control_input);
-}
-
-void Robot::Impl::writeOnce(const CartesianPose& motion_generator_input,
-                            const Torques& control_input) {
-  writeOnce<CartesianPose>(motion_generator_input, control_input);
-}
-
-void Robot::Impl::writeOnce(const CartesianVelocities& motion_generator_input,
-                            const Torques& control_input) {
-  writeOnce<CartesianVelocities>(motion_generator_input, control_input);
 }
 
 }  // namespace franka

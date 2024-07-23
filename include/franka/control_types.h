@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #pragma once
 
@@ -47,14 +47,14 @@ class Torques : public Finishable {
   /**
    * Creates a new Torques instance.
    *
-   * @param[in] torques Desired joint-level torques without gravity and friction in \f$[Nm]\f$.
+   * @param[in] torques Desired joint-level torques without gravity and friction in [Nm].
    */
   Torques(const std::array<double, 7>& torques) noexcept;
 
   /**
    * Creates a new Torques instance.
    *
-   * @param[in] torques Desired joint-level torques without gravity and friction in \f$[Nm]\f$.
+   * @param[in] torques Desired joint-level torques without gravity and friction in [Nm].
    *
    * @throw std::invalid_argument if the given initializer list has an invalid number of arguments.
    */
@@ -74,14 +74,14 @@ class JointPositions : public Finishable {
   /**
    * Creates a new JointPositions instance.
    *
-   * @param[in] joint_positions Desired joint angles in \f$[rad]\f$.
+   * @param[in] joint_positions Desired joint angles in [rad].
    */
   JointPositions(const std::array<double, 7>& joint_positions) noexcept;
 
   /**
    * Creates a new JointPositions instance.
    *
-   * @param[in] joint_positions Desired joint angles in \f$[rad]\f$.
+   * @param[in] joint_positions Desired joint angles in [rad].
    *
    * @throw std::invalid_argument if the given initializer list has an invalid number of arguments.
    */
@@ -101,7 +101,7 @@ class JointVelocities : public Finishable {
   /**
    * Creates a new JointVelocities instance.
    *
-   * @param[in] joint_velocities Desired joint velocities in \f$[\frac{rad}{s}]\f$.
+   * @param[in] joint_velocities Desired joint velocities in [rad/s].
    *
    */
   JointVelocities(const std::array<double, 7>& joint_velocities) noexcept;
@@ -109,14 +109,14 @@ class JointVelocities : public Finishable {
   /**
    * Creates a new JointVelocities instance.
    *
-   * @param[in] joint_velocities Desired joint velocities in \f$[\frac{rad}{s}]\f$.
+   * @param[in] joint_velocities Desired joint velocities in [rad/s].
    *
    * @throw std::invalid_argument if the given initializer list has an invalid number of arguments.
    */
   JointVelocities(std::initializer_list<double> joint_velocities);
 
   /**
-   * Desired joint velocities in \f$[\frac{rad}{s}]\f$.
+   * Desired joint velocities in [rad/s].
    */
   std::array<double, 7> dq{};
 };
@@ -181,14 +181,8 @@ class CartesianPose : public Finishable {
    * Elbow configuration.
    *
    * The values of the array are:
-   *  - elbow[0]: Position of the 3rd joint in \f$[rad]\f$.
-   *  - elbow[1]: Flip direction of the elbow (4th joint):
-   *    - +1 if \f$q_4 > q_{elbow-flip}\f$
-   *    - 0 if \f$q_4 == q_{elbow-flip} \f$
-   *    - -1 if \f$q_4 < q_{elbow-flip} \f$
-   *    .
-   *    with \f$q_{elbow-flip}\f$ as specified in the robot interface specification page in the FCI
-   * Documentation.
+   *  - [0] Position of the 3rd joint in [rad].
+   *  - [1] Sign of the 4th joint. Can be +1 or -1.
    */
   std::array<double, 2> elbow{};
 
@@ -203,28 +197,22 @@ class CartesianPose : public Finishable {
 
 /**
  * Stores values for Cartesian velocity motion generation.
- *
- * The Cartesian velocity of the end-effector is expressed in a frame parallel to the fixed/base
- * frame, whose origin is the same as the end-effector frame. Rotations are thus expressed around
- * the end-effector and parallel to the base frame.
  */
 class CartesianVelocities : public Finishable {
  public:
   /**
    * Creates a new CartesianVelocities instance.
    *
-   * @param[in] cartesian_velocities Desired Cartesian velocity with respect to the @ref o-frame
-   * "base frame O" with \f$(\dot x, \dot y, \dot z)\f$ in \f$[m/s]\f$ and \f$(\omega_x,
-   * \omega_y, \omega_z)\f$ in \f$[rad/s]\f$.
+   * @param[in] cartesian_velocities Desired Cartesian velocity w.r.t. O-frame {dx in [m/s], dy in
+   * [m/s], dz in [m/s], omegax in [rad/s], omegay in [rad/s], omegaz in [rad/s]}.
    */
   CartesianVelocities(const std::array<double, 6>& cartesian_velocities) noexcept;
 
   /**
    * Creates a new CartesianVelocities instance.
    *
-   * @param[in] cartesian_velocities Desired Cartesian velocity with respect to the @ref o-frame
-   * "base frame O" with \f$(\dot x, \dot y, \dot z)\f$ in \f$[m/s]\f$ and \f$(\omega_x,
-   * \omega_y, \omega_z)\f$ in \f$[rad/s]\f$.
+   * @param[in] cartesian_velocities Desired Cartesian velocity w.r.t. O-frame {dx in [m/s], dy in
+   * [m/s], dz in [m/s], omegax in [rad/s], omegay in [rad/s], omegaz in [rad/s]}.
    * @param[in] elbow Elbow configuration (see @ref elbow member for more details).
    */
   CartesianVelocities(const std::array<double, 6>& cartesian_velocities,
@@ -233,9 +221,8 @@ class CartesianVelocities : public Finishable {
   /**
    * Creates a new CartesianVelocities instance.
    *
-   * @param[in] cartesian_velocities Desired Cartesian velocity with respect to the @ref o-frame
-   * "base frame O" with \f$(\dot x, \dot y, \dot z)\f$ in \f$[m/s]\f$ and \f$(\omega_x,
-   * \omega_y, \omega_z)\f$ in \f$[rad/s]\f$.
+   * @param[in] cartesian_velocities Desired Cartesian velocity w.r.t. O-frame {dx in [m/s], dy in
+   * [m/s], dz in [m/s], omegax in [rad/s], omegay in [rad/s], omegaz in [rad/s]}.
    *
    * @throw std::invalid_argument if the given initializer list has an invalid number of arguments.
    */
@@ -244,9 +231,8 @@ class CartesianVelocities : public Finishable {
   /**
    * Creates a new CartesianVelocities instance.
    *
-   * @param[in] cartesian_velocities Desired Cartesian velocity with respect to the @ref o-frame
-   * "base frame O" with \f$(\dot x, \dot y, \dot z)\f$ in \f$[m/s]\f$ and \f$(\omega_x,
-   * \omega_y, \omega_z)\f$ in \f$[rad/s]\f$.
+   * @param[in] cartesian_velocities Desired Cartesian velocity w.r.t. O-frame {dx in [m/s], dy in
+   * [m/s], dz in [m/s], omegax in [rad/s], omegay in [rad/s], omegaz in [rad/s]}.
    * @param[in] elbow Elbow configuration (see @ref elbow member for more details).
    *
    * @throw std::invalid_argument if a given initializer list has an invalid number of arguments.
@@ -255,8 +241,8 @@ class CartesianVelocities : public Finishable {
                       std::initializer_list<double> elbow);
 
   /**
-   * Cartesian velocity with respect to the @ref o-frame "base frame O" with \f$(\dot x, \dot y,
-   * \dot z)\f$ in \f$[m/s]\f$ and \f$(\omega_x, \omega_y, \omega_z)\f$ in \f$[rad/s]\f$.
+   * Desired Cartesian velocity w.r.t. O-frame {dx in [m/s], dy in [m/s], dz in [m/s], omegax in
+   * [rad/s], omegay in [rad/s], omegaz in [rad/s]}.
    */
   std::array<double, 6> O_dP_EE{};  // NOLINT(readability-identifier-naming)
 
@@ -264,13 +250,8 @@ class CartesianVelocities : public Finishable {
    * Elbow configuration.
    *
    * The values of the array are:
-   *  - elbow[0]: Position of the 3rd joint in \f$[rad]\f$.
-   *  - elbow[1]: Flip direction of the elbow (4th joint):
-   *    - +1 if \f$q_4 > \alpha\f$
-   *    - 0 if \f$q_4 == \alpha \f$
-   *    - -1 if \f$q_4 < \alpha \f$
-   *    .
-   *    with \f$\alpha = -0.467002423653011\f$ \f$rad\f$
+   *  - [0] Position of the 3rd joint in [rad].
+   *  - [1] Sign of the 4th joint. Can be +1 or -1.
    */
   std::array<double, 2> elbow{};
 

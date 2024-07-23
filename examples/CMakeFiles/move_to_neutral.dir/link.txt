@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/move_to_neutral.dir/move_to_neutral.cpp.o  -o move_to_neutral  -Wl,-rpath,/home/panda/libfranka: libexamples_common.a ../libfranka.so.0.8.0 -lrealsense2 

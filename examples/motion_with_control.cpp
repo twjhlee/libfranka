@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Franka Robotics GmbH
+// Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <cmath>
 #include <fstream>
@@ -125,10 +125,12 @@ int main(int argc, char** argv) {
 
   Controller controller(filter_size, K_P, K_D);
 
+  
   try {
     franka::Robot robot(argv[1]);
+    
     setDefaultBehavior(robot);
-
+    
     // First move the robot to a suitable joint configuration
     std::array<double, 7> q_goal = {{0, -M_PI_4, 0, -3 * M_PI_4, 0, M_PI_2, M_PI_4}};
     MotionGenerator motion_generator(0.5, q_goal);
@@ -162,6 +164,7 @@ int main(int argc, char** argv) {
           }
 
           franka::JointVelocities velocities{{0, 0, 0, 0, 0, 0, 0}};
+          
           velocities.dq[joint_number] = trajectory[index];
 
           if (index >= trajectory.size() - 1) {

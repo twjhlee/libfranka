@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/up_down.dir/up_down.cpp.o  -o up_down  -Wl,-rpath,/home/panda/libfranka: libexamples_common.a ../libfranka.so.0.8.0 -lrealsense2 
